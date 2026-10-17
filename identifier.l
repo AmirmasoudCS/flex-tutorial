@@ -5,6 +5,10 @@
 
 %%
 
+[0-1][0-9]{10}  {
+    printf("Valid phone number.\n");
+}
+
 [a-zA-Z_][a-zA-Z0-9_]*\n {
     printf("Valid Identifier.\n");
 }
