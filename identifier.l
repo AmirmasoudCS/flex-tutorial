@@ -5,6 +5,8 @@
 
 %%
 
+[a-z0-9]{3,10}@[a-z0-9.-]+\n   {printf("Email address.\n");}
+
 [0-1][0-9]{10}\n  {
     printf("Valid phone number.\n");
 }
