@@ -439,7 +439,7 @@ char *yytext;
 #line 1 "identifier.l"
 #line 2 "identifier.l"
     
-    #include <iostream>
+    #include <stdio.h>
     
 #line 444 "lex.yy.c"
 #line 445 "lex.yy.c"
