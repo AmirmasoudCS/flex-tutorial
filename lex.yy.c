@@ -362,7 +362,7 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[9] =
     {   0,
-        0,    0,    6,    2,    2,    4,    1,    0
+        0,    0,    6,    3,    2,    4,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -725,12 +725,12 @@ YY_RULE_SETUP
 case 2:
 YY_RULE_SETUP
 #line 9 "tutorial.l"
-{ printf("Not a lower-case character\n"); }
+{ printf("Tab character\n");}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 10 "tutorial.l"
-{ printf("Tab character\n");}
+{ printf("Not a lower-case character\n"); }
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
