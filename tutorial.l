@@ -1,5 +1,6 @@
 %{
     /* Definitions */
+    #include <stdio.h>
 
 
 
@@ -14,7 +15,7 @@
 
 %%
 
-yywrap() {}
+yywrap() { return 1; }
 
 int main() {
     printf("Enter string: ");
