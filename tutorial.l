@@ -1,25 +1,24 @@
+
 %{
-    /* Definitions */
-    #include <stdio.h>
-
-
-
+#include <stdio.h>
 %}
-
-%%  /* Rules */
-    
-
-    [a-z] {printf("Single lower-case character\n");}
-    . {printf("Not a lower-case character\n");} /* dot denotes that anything but a new line */
-    \n {return 0;}
 
 %%
 
-yywrap() { return 1; }
+[a-z]   { printf("Single lower-case character\n"); }
+.       { printf("Not a lower-case character\n"); }
+\n      { return 0; }
 
-int main() {
+%%
+
+int yywrap(void)
+{
+    return 1;
+}
+
+int main(void)
+{
     printf("Enter string: ");
     yylex();
-
     return 0;
 }

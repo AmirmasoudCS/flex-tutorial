@@ -439,11 +439,12 @@ char *yytext;
 #line 1 "tutorial.l"
 #line 2 "tutorial.l"
     /* Definitions */
+    #include <stdio.h>
 
 
 
-#line 445 "lex.yy.c"
 #line 446 "lex.yy.c"
+#line 447 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -660,16 +661,16 @@ YY_DECL
 		}
 
 	{
-#line 8 "tutorial.l"
+#line 9 "tutorial.l"
 
-#line 10 "tutorial.l"
+#line 11 "tutorial.l"
     
 
     [a-z] {printf("Single lower-case character\n");}
     . {printf("Not a lower-case character\n");} /* dot denotes that anything but a new line */
     \n {return 0;}
 
-#line 672 "lex.yy.c"
+#line 673 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -728,10 +729,10 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 16 "tutorial.l"
+#line 17 "tutorial.l"
 ECHO;
 	YY_BREAK
-#line 734 "lex.yy.c"
+#line 735 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1736,10 +1737,10 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 16 "tutorial.l"
+#line 17 "tutorial.l"
 
 
-yywrap() {}
+yywrap() { return 1; }
 
 int main() {
     printf("Enter string: ");
