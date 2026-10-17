@@ -7,6 +7,7 @@
 
 [a-z]   { printf("Single lower-case character\n"); }
 .       { printf("Not a lower-case character\n"); }
+\t      { printf("Tab character\n");}
 \n      { return 0; }
 
 %%
